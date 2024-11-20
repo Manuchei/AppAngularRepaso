@@ -1,0 +1,49 @@
+<section class="container">
+
+<div class="shadow p-5">
+    <div>
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Introduce tu 
+        nombre" [ (ngModel)] = "nuevoTrabajador.nombre">
+    </div>
+
+    <div>
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos" [ (ngModel)] = "nuevoTrabajador.apellidos">
+    </div>
+
+    <div>
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" placeholder="Introduce tus edad" [ (ngModel)] = "nuevoTrabajador.edad">
+    </div>
+
+    <div>
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Introduce tus email" [ (ngModel)] = "nuevoTrabajador.email"> 
+    </div>
+
+    <div>
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="telefono" placeholder="Introduce tus telefono" [ (ngModel)] = "nuevoTrabajador.telefono">
+    </div>
+
+    <div>
+        <label for="Cargo" class="form-label">Cargo</label>
+        <select name="cargo" id="cargo" class="form-control" [ (ngModel)] = "nuevoTrabajador.cargo">
+            <option value="vacio" selected>Selecciona un puesto:</option>
+            <option value="Analista"></option>
+            <option value="Diseñador"></option>
+            <option value="ProjectManajer"></option>
+            <option value="Desarrollador"></option>
+        </select>
+    </div>
+
+    <button class="btn btn-secondary mt-5" (click)="guardarDatos()">Guradar</button>
+
+</div>
+
+<hr>
+
+<div class="container shadow" [innerHTML]="cargarDatos()"></div>
+    
+</section>
